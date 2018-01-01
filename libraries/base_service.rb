@@ -46,7 +46,7 @@ class Chef
               new_resource.data_dir
             ]
             create_directories(dirs)
-            install_proxysql_repository
+            # install_proxysql_repository
             deriver_install
           end
         end
@@ -64,7 +64,7 @@ class Chef
 
       def platform_supported?
         platform = node['platform']
-        return if %w[redhat centos].include?(platform)
+        return if %w[redhat centos ubuntu].include?(platform)
         raise "Platform #{platform} is not supported"
       end
 

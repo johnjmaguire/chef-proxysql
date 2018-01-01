@@ -1,14 +1,7 @@
-default['percona']['repository']['name'] = 'percona-release.repo'
-default['percona']['repository']['version'] = '0.1-4'
-default['percona']['repository']['url'] = 'http://www.percona.com/'\
-  'downloads/percona-release/redhat/'\
-  "#{node['percona']['repository']['version']}/"\
-  "percona-release-#{node['percona']['repository']['version']}.noarch.rpm"
-
 default['proxysql']['user'] = 'proxysql'
 default['proxysql']['group'] = 'proxysql'
-
-default['proxysql']['version'] = '1.4.3-1.1.el7'
+default['proxysql']['version'] = '1.4.4'
+default['proxysql']['package']['url'] = "https://github.com/sysown/proxysql/releases/download/v#{node['proxysql']['version']}/proxysql_#{node['proxysql']['version']}-ubuntu16_amd64.deb"
 default['proxysql']['config_dir'] = '/etc/proxysql'
 default['proxysql']['data_dir'] = '/var/lib/proxysql'
 

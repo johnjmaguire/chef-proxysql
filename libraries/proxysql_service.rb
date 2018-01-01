@@ -311,8 +311,12 @@ class Chef
       end
 
       def install_proxysql
-        package 'proxysql' do
-          version new_resource.version
+        remote_file '/tmp/proxysql.deb' do
+          source node['proxysql']['package']['url']
+        end
+        
+        dpkg_package '/tmp/proxysql.deb' do
+          action :install
         end
 
         # Remove package defaults

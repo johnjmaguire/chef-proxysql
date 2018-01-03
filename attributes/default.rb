@@ -1,7 +1,7 @@
 default['proxysql']['user'] = 'proxysql'
 default['proxysql']['group'] = 'proxysql'
 default['proxysql']['version'] = '1.4.4'
-default['proxysql']['package']['url'] = "https://github.com/sysown/proxysql/releases/download/v#{node['proxysql']['version']}/proxysql_#{node['proxysql']['version']}-ubuntu16_amd64.deb"
+default['proxysql']['package']['url'] = "https://github.com/slicelife/proxysql/releases/download/v#{node['proxysql']['version']}-aurora-read-only/proxysql_#{node['proxysql']['version']}-slice-ubuntu16_amd64.deb"
 default['proxysql']['config_dir'] = '/etc/proxysql'
 default['proxysql']['data_dir'] = '/var/lib/proxysql'
 
